@@ -1115,8 +1115,8 @@ h4{
   right: -2.5rem;
 }
 
-.-right-4{
-  right: -1rem;
+.-right-5{
+  right: -1.25rem;
 }
 
 .-top-16{
@@ -1151,6 +1151,10 @@ h4{
   right: 0px;
 }
 
+.right-16{
+  right: 4rem;
+}
+
 .right-6{
   right: 1.5rem;
 }
@@ -1169,62 +1173,6 @@ h4{
 
 .top-\[103px\]{
   top: 103px;
-}
-
-.left-32{
-  left: 8rem;
-}
-
-.left-56{
-  left: 14rem;
-}
-
-.left-64{
-  left: 16rem;
-}
-
-.right-64{
-  right: 16rem;
-}
-
-.left-80{
-  left: 20rem;
-}
-
-.right-80{
-  right: 20rem;
-}
-
-.left-44{
-  left: 11rem;
-}
-
-.right-44{
-  right: 11rem;
-}
-
-.-right-6{
-  right: -1.5rem;
-}
-
-.-right-5{
-  right: -1.25rem;
-}
-
-.left-12{
-  left: 3rem;
-}
-
-.right-12{
-  right: 3rem;
-}
-
-.left-8{
-  left: 2rem;
-}
-
-.right-8{
-  right: 2rem;
 }
 
 .z-10{
@@ -1281,6 +1229,11 @@ h4{
   margin-bottom: 0.5rem;
 }
 
+.my-20{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .my-24{
   margin-top: 6rem;
   margin-bottom: 6rem;
@@ -1299,36 +1252,6 @@ h4{
 .my-8{
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
-
-.mx-24{
-  margin-left: 6rem;
-  margin-right: 6rem;
-}
-
-.mx-56{
-  margin-left: 14rem;
-  margin-right: 14rem;
-}
-
-.mx-44{
-  margin-left: 11rem;
-  margin-right: 11rem;
-}
-
-.mx-32{
-  margin-left: 8rem;
-  margin-right: 8rem;
-}
-
-.my-16{
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
-
-.my-20{
-  margin-top: 5rem;
-  margin-bottom: 5rem;
 }
 
 .-mb-px{
@@ -1431,16 +1354,16 @@ h4{
   height: 1rem;
 }
 
-.h-44{
-  height: 11rem;
-}
-
 .h-56{
   height: 14rem;
 }
 
 .h-6{
   height: 1.5rem;
+}
+
+.h-64{
+  height: 16rem;
 }
 
 .h-7{
@@ -1465,10 +1388,6 @@ h4{
 
 .h-full{
   height: 100%;
-}
-
-.h-64{
-  height: 16rem;
 }
 
 .w-1\/2{
@@ -1515,36 +1434,12 @@ h4{
   width: 2rem;
 }
 
-.w-full{
-  width: 100%;
-}
-
-.w-2\/3{
-  width: 66.666667%;
-}
-
-.w-\[50\%\]{
-  width: 50%;
-}
-
-.w-\[30\%\]{
-  width: 30%;
-}
-
-.w-\[75\%\]{
-  width: 75%;
-}
-
 .w-\[60\%\]{
   width: 60%;
 }
 
-.w-\[40\%\]{
-  width: 40%;
-}
-
-.w-\[80\%\]{
-  width: 80%;
+.w-full{
+  width: 100%;
 }
 
 .flex-1{
@@ -1595,13 +1490,13 @@ h4{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.skew-x-12{
-  --tw-skew-x: 12deg;
+.-skew-x-12{
+  --tw-skew-x: -12deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.-skew-x-12{
-  --tw-skew-x: -12deg;
+.skew-x-12{
+  --tw-skew-x: 12deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1909,16 +1804,6 @@ h4{
   --tw-bg-opacity: 0.5;
 }
 
-.object-cover{
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.object-fill{
-  -o-object-fit: fill;
-     object-fit: fill;
-}
-
 .p-1{
   padding: 0.25rem;
 }
@@ -1941,11 +1826,6 @@ h4{
 
 .p-7{
   padding: 1.75rem;
-}
-
-.px-12{
-  padding-left: 3rem;
-  padding-right: 3rem;
 }
 
 .px-2{
@@ -2029,16 +1909,16 @@ h4{
   padding-right: 0.75rem;
 }
 
+.pr-4{
+  padding-right: 1rem;
+}
+
 .pt-12{
   padding-top: 3rem;
 }
 
 .pt-2{
   padding-top: 0.5rem;
-}
-
-.pr-4{
-  padding-right: 1rem;
 }
 
 .text-left{
@@ -2446,6 +2326,10 @@ h4{
     height: 18rem;
   }
 
+  .sm\:h-auto{
+    height: auto;
+  }
+
   .sm\:w-64{
     width: 16rem;
   }
@@ -2466,8 +2350,9 @@ h4{
     border-bottom-width: 2px;
   }
 
-  .sm\:border-r-2{
-    border-right-width: 2px;
+  .sm\:px-12{
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .sm\:px-24{
@@ -2501,12 +2386,12 @@ h4{
     display: none;
   }
 
-  .md\:h-96{
-    height: 24rem;
-  }
-
   .md\:w-\[80\%\]{
     width: 80%;
+  }
+
+  .md\:w-screen{
+    width: 100vw;
   }
 
   .md\:grid-cols-2{
@@ -2535,16 +2420,12 @@ h4{
     right: 11rem;
   }
 
+  .lg\:col-span-1{
+    grid-column: span 1 / span 1;
+  }
+
   .lg\:flex{
     display: flex;
-  }
-
-  .lg\:h-56{
-    height: 14rem;
-  }
-
-  .lg\:w-1\/2{
-    width: 50%;
   }
 
   .lg\:w-2\/3{
