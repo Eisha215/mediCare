@@ -10,9 +10,9 @@ module.exports = {
         'lightBlue' : "#4095cd",
       },
       fontFamily:{
-        "Roboto" : 'Roboto sans-serif',
-        "Roboto-lg" : 'Roboto Light'
+       "roboto" : "Roboto, sans-serif;"
       },
+    
     },
   },
   plugins: [  
