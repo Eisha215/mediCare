@@ -118,3 +118,62 @@ var canvasElement = document.querySelector("#myCanvas1");
 
     context7.fillStyle = "#b25a5a";
     context7.fill();
+
+
+    const cardiology = document.getElementById("cardiology");
+    const cardio = document.getElementById('cardio');
+    cardio.addEventListener("click",()=>{
+        cardiology.classList.add('bg-Navyblue');
+    }
+    );
+
+
+    const tab1 = document.getElementById("Cardiology");
+    const tab2 = document.getElementById("Neurology");
+    const tab3 = document.getElementById("Urology");
+    const tab4 = document.getElementById("Ophthalmology");
+    const tab5 = document.getElementById("Cardiology2");
+
+    function toggleTab1(){
+        tab1.classList.toggle("hidden");
+        tab2.classList.add("hidden");
+        tab3.classList.add("hidden");
+        tab4.classList.add("hidden");
+        tab5.classList.add("hidden");
+
+    }
+
+    function toggleTab2(){
+        tab2.classList.toggle("hidden")
+        tab1.classList.add("hidden");
+        tab3.classList.add("hidden");
+        tab4.classList.add("hidden");
+        tab5.classList.add("hidden");
+    }
+
+    function toggleTab3(){
+        tab3.classList.toggle("hidden")
+        tab1.classList.add("hidden");
+        tab2.classList.add("hidden");
+        tab4.classList.add("hidden");
+        tab5.classList.add("hidden");
+    }
+
+    function toggleTab4(){
+        tab4.classList.toggle("hidden")
+        tab1.classList.add("hidden");
+        tab3.classList.add("hidden");
+        tab2.classList.add("hidden");
+        tab5.classList.add("hidden");
+    }
+
+    function toggleTab5(){
+        tab5.classList.toggle("hidden")
+        tab1.classList.add("hidden");
+        tab2.classList.add("hidden");
+        tab3.classList.add("hidden");
+        tab4.classList.add("hidden");
+    }
+
+
+    

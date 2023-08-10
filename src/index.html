@@ -6,14 +6,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="../src/css/output.css" rel="stylesheet">
         <link href="../src/assets/styles.css" rel="stylesheet">
+        <style>
+    
+  /* Custom styling for the select arrow icon */
+  select::-ms-expand {
+    color: white;
+  }
+  
+  select::after {
+    content: '▼';
+    color: white;
+    position: absolute;
+    right: 12px;
+    top: calc(50% - 0.5em);
+    pointer-events: none;
+  }
 
+        </style>
 
     </head>
-    <body class="font-roboto">
+    <body class="">
         <header >
             <nav class=" hidden lg:flex justify-end space-x-4 my-2  items-center border-b-2 pb-2 px-24">                
                 <svg xmlns="http://www.w3.org/2000/svg" height="1em" class="inline-block" fill="#0072bc" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
-                <span class="border-r border-slate-700 pr-3">contact@medicare.com</span>
+                <span class="border-r border-slate-700 pr-3 ">contact@medicare.com</span>
 
 
                 <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="1em"  class="inline-block" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
@@ -26,7 +42,7 @@
                 <span>Book an Appointment</span>
                 
             </nav>
-            <div class=" flex justify-between mt-6 mx-6 sm:ml-20 mr-24">
+            <div class=" flex justify-between  mt-6   sm:ml-20 mr-12 sm:mr-24">
                 <img src="../src/assets/Capture.PNG" class="w-56 ">
                 <div class=" flex right-nav items-center gap-3">
                     <div class="hidden  md:flex justify-center items-center time">
@@ -187,7 +203,10 @@
                         <input type="text" class="bg-lightBlue px-5 py-3 mx-12 placeholder-white border-none  uppercase text-white outline-none  focus:outline-none text-sm" placeholder="YOUR NAME">
                         <input type="number" class="bg-lightBlue placeholder-white px-5 py-3 mx-12 border-none uppercase text-white outline-none  focus:outline-none text-sm" placeholder="PHONE">
                        
-                        <select name="dept" id="dept" class="bg-lightBlue text-white px-5 border-none py-3 mx-12">
+                       
+
+                        
+                        <select name="dept" id="dept" class="bg-lightBlue text-white px-5 border-none py-3 mx-12 relative ">
                             <option>Select Department:</option>
 
                             <option>Dental</option>
@@ -198,21 +217,50 @@
                             <option>Neurology</option>
 
                         </select>
-
-                        <select name="dept" id="dept" class="bg-lightBlue text-white   border-none px-5 py-3 mx-12">
+                    
+                        <select name="dept" id="dept" class="bg-lightBlue text-white px-5 border-none py-3 mx-12 relative after:left-5 after:absolute after:content-['#f107']">
                             <option>Select Doctors:</option>
 
                             <option>Dr. Jack Smith</option>
-                            <option>Dr. Sevanah Rose</option>
+                            <option>Dr. Sevanah Ros</option>
                             <option>Dr. Cole Librant</option>
                             <option>Dr. Taytum Fisher</option>
 
+                            
 
                         </select>
+                        <!-- <div class="relative text-white px-5  py-3 bg-lightBlue mx-12 text-left">
+                            <button onclick="dropdownToggle()" class=" w-full rounded flex justify-between items-center">
+                              <span>Select Doctors:</span>
+                              <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="white" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. <path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
+                            </button>
+                            <div id="dropdown-menu" class="hiffen absolute right-0 mt-2 w-full  rounded-md shadow-lg bg-lightBlue text-white ring-opacity-5 hidden">
+                              <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-button">
+                                <a href="#" class="block px-4 py-2 text-sm ">Dr. Jack Smith</a>
+                                <a href="#" class="block px-4 py-2 text-sm" >Dr. Sevanah Ros</a>
+                                <a href="#" class="block px-4 py-2 text-sm ">Dr. Cole Librant</a>
+                                <a href="#" class="block px-4 py-2 text-sm " >Dr. Taytum Fisher</a>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <script>
+                           
+                            const dropdownMenu = document.getElementById('dropdown-menu');
+                          
+                            function dropdownToggle(){
+                                dropdownMenu.classList.toggle("hidden")
+                            }
+                           
+                          
+                           
+                          </script> -->
+                          
+                          
 
                         
-                            <input type="email" class="bg-lightBlue px-5 py-3 mx-12 placeholder-white  border-none uppercase text-white outline-none  focus:outline-none text-sm" placeholder="YOUR EMAIL" >
-
+                            <input type="email" class="bg-lightBlue px-5  py-3 mx-12 placeholder-white  border-none uppercase text-white outline-none  focus:outline-none text-sm" placeholder="YOUR EMAIL" >
+                          
                             <input type="date" class="bg-lightBlue px-5 py-3 mx-12  placeholder-white border-none uppercase text-white  outline-none  focus:outline-none text-sm" placeholder="DD/MM/YYYY">
 
                             <button class="border-white bg-transparent inline-block btn border-2 mx-12 ">Book an Appointment!</button>                    
@@ -221,64 +269,56 @@
                 </div>
             </div>
         </section>
-        <!-- <div class="p-10">
-            <div class="flex space-x-3 items-center hover:bg-messenger-gray-100 relative p-2 rounded-lg group cursor-pointer border active:bg-blue-50">
-                    <span class=" font-normal whitespace-nowrap">Muhammad Hamza</span>
-            </div>
-            
-            <button class=" w-full flex my-4  items-start hover:bg-gray-100   p-2 rounded-lg group cursor-pointer border active:bg-blue-50 focus:bg-pink-300 focus:border-pink-500"> Muhammad Hamza with focus </button>
-            
-            </div> -->
+        
         <section class="department-section px-6 sm:px-24 py-12">
             <div class="dept">
                 <h2>Our <span class="text-Navyblue font-bold">Department</span></h2>
             <img src="../src/assets/heart-beat.PNG" class="mx-auto">
             <div class="mb-4 my-24">
-                <ul class="grid md:grid-cols-3 lg:grid-cols-5  -mb-px text-sm  font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
-                    <li class="group" role="presentation">
-                        <div class="dept border-b-2 border-r-2 border-l-2  group focus:bg-pink-300 focus:border-pink-500   bg-white hover:bg-Navyblue cursor-pointer  hover:text-white group flex flex-col justify-center items-center  py-2" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
-            
-                            <svg xmlns="http://www.w3.org/2000/svg" height="3em" class="inline-block mr-2 p-1 group focus:bg-pink-300 focus:border-pink-500  group-hover:fill-white" fill="#0072bc" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M119.4 44.1c23.3-3.9 46.8-1.9 68.6 5.3l49.8 77.5-75.4 75.4c-1.5 1.5-2.4 3.6-2.3 5.8s1 4.2 2.6 5.7l112 104c2.9 2.7 7.4 2.9 10.5 .3s3.8-7 1.7-10.4l-60.4-98.1 90.7-75.6c2.6-2.1 3.5-5.7 2.4-8.8L296.8 61.8c28.5-16.7 62.4-23.2 95.7-17.6C461.5 55.6 512 115.2 512 185.1v5.8c0 41.5-17.2 81.2-47.6 109.5L283.7 469.1c-7.5 7-17.4 10.9-27.7 10.9s-20.2-3.9-27.7-10.9L47.6 300.4C17.2 272.1 0 232.4 0 190.9v-5.8c0-69.9 50.5-129.5 119.4-141z"/></svg>  
-                            <h4 >Cardiology</h4>
-                        </div> 
-                        <!-- <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button> -->
-                    </li>
-                    
-                    <li class="" role="presentation">
-                        <div class=" dept border-b-2 border-r-2 border-l-2 bg-white hover:bg-Navyblue  cursor-pointer hover:text-white group flex flex-col justify-center items-center py-2" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">
-                            <svg xmlns="http://www.w3.org/2000/svg"height="3em" class="inline-block mr-2 p-1 group-hover:fill-white " fill="#0072bc"  viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M184 0c30.9 0 56 25.1 56 56V456c0 30.9-25.1 56-56 56c-28.9 0-52.7-21.9-55.7-50.1c-5.2 1.4-10.7 2.1-16.3 2.1c-35.3 0-64-28.7-64-64c0-7.4 1.3-14.6 3.6-21.2C21.4 367.4 0 338.2 0 304c0-31.9 18.7-59.5 45.8-72.3C37.1 220.8 32 207 32 192c0-30.7 21.6-56.3 50.4-62.6C80.8 123.9 80 118 80 112c0-29.9 20.6-55.1 48.3-62.1C131.3 21.9 155.1 0 184 0zM328 0c28.9 0 52.6 21.9 55.7 49.9c27.8 7 48.3 32.1 48.3 62.1c0 6-.8 11.9-2.4 17.4c28.8 6.2 50.4 31.9 50.4 62.6c0 15-5.1 28.8-13.8 39.7C493.3 244.5 512 272.1 512 304c0 34.2-21.4 63.4-51.6 74.8c2.3 6.6 3.6 13.8 3.6 21.2c0 35.3-28.7 64-64 64c-5.6 0-11.1-.7-16.3-2.1c-3 28.2-26.8 50.1-55.7 50.1c-30.9 0-56-25.1-56-56V56c0-30.9 25.1-56 56-56z"/></svg>
-                            <h4 >Neurology</h4>
-                        </div>
+                <ul class="grid md:grid-cols-3 gap-4 lg:grid-cols-5  -mb-px text-sm  font-medium text-center" >
+                    <li class="group-focus:bg-Navyblue border-b-2 border-r-2 border-l-2" onclick="toggleTab1()">
+                        <button class=" dept  w-full group focus:bg-Navyblue focus:text-white   bg-white hover:bg-Navyblue  cursor-pointer hover:text-white group flex flex-col justify-center items-center py-2" >
+                            <svg xmlns="http://www.w3.org/2000/svg" height="3em" class="inline-block mr-2 p-1 group-focus:fill-white group-hover:fill-white " fill="#0072bc"  viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M184 0c30.9 0 56 25.1 56 56V456c0 30.9-25.1 56-56 56c-28.9 0-52.7-21.9-55.7-50.1c-5.2 1.4-10.7 2.1-16.3 2.1c-35.3 0-64-28.7-64-64c0-7.4 1.3-14.6 3.6-21.2C21.4 367.4 0 338.2 0 304c0-31.9 18.7-59.5 45.8-72.3C37.1 220.8 32 207 32 192c0-30.7 21.6-56.3 50.4-62.6C80.8 123.9 80 118 80 112c0-29.9 20.6-55.1 48.3-62.1C131.3 21.9 155.1 0 184 0zM328 0c28.9 0 52.6 21.9 55.7 49.9c27.8 7 48.3 32.1 48.3 62.1c0 6-.8 11.9-2.4 17.4c28.8 6.2 50.4 31.9 50.4 62.6c0 15-5.1 28.8-13.8 39.7C493.3 244.5 512 272.1 512 304c0 34.2-21.4 63.4-51.6 74.8c2.3 6.6 3.6 13.8 3.6 21.2c0 35.3-28.7 64-64 64c-5.6 0-11.1-.7-16.3-2.1c-3 28.2-26.8 50.1-55.7 50.1c-30.9 0-56-25.1-56-56V56c0-30.9 25.1-56 56-56z"/></svg>
+                            <h4 >Cardiology<h4>
+                        </button>
                         <!-- <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Dashboard</button> -->
                     </li>
-                    <li class="" role="presentation">
-                        <div class=" dept border-b-2 border-r-2 border-l-2  bg-white hover:bg-Navyblue  cursor-pointer hover:text-white group flex flex-col justify-center items-center py-2" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="3em" class="inline-block mr-2 p-1 group-hover:fill-white" fill="#0072bc" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M192 512C86 512 0 426 0 320C0 228.8 130.2 57.7 166.6 11.7C172.6 4.2 181.5 0 191.1 0h1.8c9.6 0 18.5 4.2 24.5 11.7C253.8 57.7 384 228.8 384 320c0 106-86 192-192 192zM96 336c0-8.8-7.2-16-16-16s-16 7.2-16 16c0 61.9 50.1 112 112 112c8.8 0 16-7.2 16-16s-7.2-16-16-16c-44.2 0-80-35.8-80-80z"/></svg>
+                    
+                    <li class="group-focus:bg-Navyblue border-b-2 border-r-2 border-l-2" onclick="toggleTab2()">
+                        <button class=" dept  w-full group focus:bg-Navyblue focus:text-white   bg-white hover:bg-Navyblue  cursor-pointer hover:text-white group flex flex-col justify-center items-center py-2" >
+                            <svg xmlns="http://www.w3.org/2000/svg" height="3em" class="inline-block mr-2 p-1 group-focus:fill-white group-hover:fill-white " fill="#0072bc"  viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M184 0c30.9 0 56 25.1 56 56V456c0 30.9-25.1 56-56 56c-28.9 0-52.7-21.9-55.7-50.1c-5.2 1.4-10.7 2.1-16.3 2.1c-35.3 0-64-28.7-64-64c0-7.4 1.3-14.6 3.6-21.2C21.4 367.4 0 338.2 0 304c0-31.9 18.7-59.5 45.8-72.3C37.1 220.8 32 207 32 192c0-30.7 21.6-56.3 50.4-62.6C80.8 123.9 80 118 80 112c0-29.9 20.6-55.1 48.3-62.1C131.3 21.9 155.1 0 184 0zM328 0c28.9 0 52.6 21.9 55.7 49.9c27.8 7 48.3 32.1 48.3 62.1c0 6-.8 11.9-2.4 17.4c28.8 6.2 50.4 31.9 50.4 62.6c0 15-5.1 28.8-13.8 39.7C493.3 244.5 512 272.1 512 304c0 34.2-21.4 63.4-51.6 74.8c2.3 6.6 3.6 13.8 3.6 21.2c0 35.3-28.7 64-64 64c-5.6 0-11.1-.7-16.3-2.1c-3 28.2-26.8 50.1-55.7 50.1c-30.9 0-56-25.1-56-56V56c0-30.9 25.1-56 56-56z"/></svg>
+                            <h4 >Neurology</h4>
+                        </button>
+                        <!-- <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Dashboard</button> -->
+                    </li>
+                    <li class="group-focus:bg-Navyblue border-b-2 border-r-2 border-l-2"  onclick="toggleTab3()">
+                        <button class=" dept  group w-full focus:bg-Navyblue focus:text-white   bg-white hover:bg-Navyblue  cursor-pointer hover:text-white group flex flex-col justify-center items-center py-2" >
+                            <svg xmlns="http://www.w3.org/2000/svg" height="3em" class="inline-block mr-2 p-1 group-focus:fill-white group-hover:fill-white" fill="#0072bc" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M192 512C86 512 0 426 0 320C0 228.8 130.2 57.7 166.6 11.7C172.6 4.2 181.5 0 191.1 0h1.8c9.6 0 18.5 4.2 24.5 11.7C253.8 57.7 384 228.8 384 320c0 106-86 192-192 192zM96 336c0-8.8-7.2-16-16-16s-16 7.2-16 16c0 61.9 50.1 112 112 112c8.8 0 16-7.2 16-16s-7.2-16-16-16c-44.2 0-80-35.8-80-80z"/></svg>
                             <h4 >Urology</h4>
-                        </div>
+                        </button>
                         <!-- <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button> -->
                     </li>
-                    <li role="presentation">
-                        <div class=" dept border-b-2 border-r-2 border-l-2  bg-white hover:bg-Navyblue  cursor-pointer hover:text-white group flex flex-col justify-center items-center py-2" id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="3em" class="inline-block mr-2 p-1 group-hover:fill-white" fill="#0072bc" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M192 512C86 512 0 426 0 320C0 228.8 130.2 57.7 166.6 11.7C172.6 4.2 181.5 0 191.1 0h1.8c9.6 0 18.5 4.2 24.5 11.7C253.8 57.7 384 228.8 384 320c0 106-86 192-192 192zM96 336c0-8.8-7.2-16-16-16s-16 7.2-16 16c0 61.9 50.1 112 112 112c8.8 0 16-7.2 16-16s-7.2-16-16-16c-44.2 0-80-35.8-80-80z"/></svg>
+                    <li class="group-focus:bg-Navyblue border-b-2 border-r-2 border-l-2" onclick="toggleTab4()">
+                        <button class=" dept   w-full  focus:bg-Navyblue focus:text-white  bg-white hover:bg-Navyblue  cursor-pointer hover:text-white group flex flex-col justify-center items-center py-2" >
+                            <svg xmlns="http://www.w3.org/2000/svg" height="3em" class="inline-block mr-2 p-1 group-focus:fill-white group-hover:fill-white" fill="#0072bc" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M192 512C86 512 0 426 0 320C0 228.8 130.2 57.7 166.6 11.7C172.6 4.2 181.5 0 191.1 0h1.8c9.6 0 18.5 4.2 24.5 11.7C253.8 57.7 384 228.8 384 320c0 106-86 192-192 192zM96 336c0-8.8-7.2-16-16-16s-16 7.2-16 16c0 61.9 50.1 112 112 112c8.8 0 16-7.2 16-16s-7.2-16-16-16c-44.2 0-80-35.8-80-80z"/></svg>
                             <h4 >Ophthalmology</h4>
-                        </div>
+                        </button>
                         <!-- <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">Contacts</button> -->
                     </li>
-                    <li role="presentation">
-                        <div class="dept border-b-2 border-r-2 border-l-2 bg-white hover:bg-Navyblue  cursor-pointer hover:text-white group flex flex-col justify-center items-center py-2" id="profile-tab2" data-tabs-target="#profile2" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                    <li class="group-focus:bg-Navyblue border-b-2 border-r-2 border-l-2" role="presentation" onclick="toggleTab5()">
+                        <button class="dept  group w-full focus:bg-Navyblue focus:text-white  bg-white hover:bg-Navyblue  cursor-pointer hover:text-white group flex flex-col justify-center items-center py-2" >
             
-                            <svg xmlns="http://www.w3.org/2000/svg" height="3em" class="inline-block mr-2 p-1 group-hover:fill-white" fill="#0072bc" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M119.4 44.1c23.3-3.9 46.8-1.9 68.6 5.3l49.8 77.5-75.4 75.4c-1.5 1.5-2.4 3.6-2.3 5.8s1 4.2 2.6 5.7l112 104c2.9 2.7 7.4 2.9 10.5 .3s3.8-7 1.7-10.4l-60.4-98.1 90.7-75.6c2.6-2.1 3.5-5.7 2.4-8.8L296.8 61.8c28.5-16.7 62.4-23.2 95.7-17.6C461.5 55.6 512 115.2 512 185.1v5.8c0 41.5-17.2 81.2-47.6 109.5L283.7 469.1c-7.5 7-17.4 10.9-27.7 10.9s-20.2-3.9-27.7-10.9L47.6 300.4C17.2 272.1 0 232.4 0 190.9v-5.8c0-69.9 50.5-129.5 119.4-141z"/></svg>  
+                            <svg xmlns="http://www.w3.org/2000/svg" height="3em" class="inline-block mr-2 p-1 group-focus:fill-white group-hover:fill-white" fill="#0072bc" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M119.4 44.1c23.3-3.9 46.8-1.9 68.6 5.3l49.8 77.5-75.4 75.4c-1.5 1.5-2.4 3.6-2.3 5.8s1 4.2 2.6 5.7l112 104c2.9 2.7 7.4 2.9 10.5 .3s3.8-7 1.7-10.4l-60.4-98.1 90.7-75.6c2.6-2.1 3.5-5.7 2.4-8.8L296.8 61.8c28.5-16.7 62.4-23.2 95.7-17.6C461.5 55.6 512 115.2 512 185.1v5.8c0 41.5-17.2 81.2-47.6 109.5L283.7 469.1c-7.5 7-17.4 10.9-27.7 10.9s-20.2-3.9-27.7-10.9L47.6 300.4C17.2 272.1 0 232.4 0 190.9v-5.8c0-69.9 50.5-129.5 119.4-141z"/></svg>  
                             <h4 >Cardiology</h4>
-                        </div> 
+                        </button> 
                         <!-- <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">Contacts</button> -->
                     </li>
                 </ul>
             </div>
             <div id="myTabContent ">
-                <div class="hidden  rounded-lg dark:bg-gray-800" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="block cursor-pointer  rounded-lg dark:bg-gray-800" id="Cardiology"  >
                     <div class="grid lg:grid-cols-3 lg:gap-16 mt-4 px-4 sm:px-12 shadow-2xl  py-12" >
-                        <div class=" md:col-span-2">
+                        <div class=" md:col-span-2" id="cardio">
                             <h2 class="text-left">Cardiology</h2>
                             <p >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
             
@@ -318,7 +358,7 @@
                         </div>
             
                     </div>    </div>
-                <div class="hidden  rounded-lg dark:bg-gray-800" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                <div class="hidden cursor-pointer  rounded-lg dark:bg-gray-800" id="Neurology" >
                     <div class="grid lg:grid-cols-3 lg:gap-16 mt-4 px-4 sm:px-12 shadow-2xl  py-12" >
                         <div class=" md:col-span-2">
                             <h2 class="text-left">Neurology</h2>
@@ -360,7 +400,7 @@
                         </div>
             
                     </div>   </div>
-                <div class="hidden  rounded-lg dark:bg-gray-800" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                <div class="hidden cursor-pointer rounded-lg dark:bg-gray-800" id="Urology" >
                     <div class="grid lg:grid-cols-3 lg:gap-16 mt-4 px-4 sm:px-12 shadow-2xl  py-12" >
                         <div class=" md:col-span-2">
                             <h2 class="text-left">Urology</h2>
@@ -402,7 +442,7 @@
                         </div>
             
                     </div>      </div>
-                <div class="hidden  rounded-lg dark:bg-gray-800" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+                <div class="hidden cursor-pointer  rounded-lg dark:bg-gray-800" id="Ophthalmology" >
                     <div class="grid lg:grid-cols-3 lg:gap-16 mt-4 px-4 sm:px-12 shadow-2xl  py-12" >
                         <div class=" md:col-span-2">
                             <h2 class="text-left">Ophthalmology</h2>
@@ -444,7 +484,7 @@
                         </div>
             
                     </div>       </div>
-                    <div class="hidden  rounded-lg dark:bg-gray-800" id="profile2" role="tabpanel" aria-labelledby="profile-tab2">
+                    <div class="hidden cursor-pointer rounded-lg dark:bg-gray-800" id="Cardiology2" >
                         <div class="grid lg:grid-cols-3 lg:gap-16 mt-4 px-4 sm:px-12 shadow-2xl  py-12" >
                             <div class=" md:col-span-2">
                                 <h2 class="text-left">Cardiology</h2>
@@ -564,8 +604,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="white"class="inline-block mx-2" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em"fill="white" class="inline-block mx-2" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
                         <p class="my-4" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="0.75em" class="absolute w-10 h-[50px] bg-peach p-2.5  -top-6 right-16" fill="white"  viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
-                        <canvas id="myCanvas1"  class=" absolute w-24 h-[72px] -top-[72px] right-0"></canvas>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.75em" class="absolute w-10 h-[50px] bg-peach p-2.5  -top-[1rem] right-[65px]" fill="white"  viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+                        <canvas id="myCanvas1"  class=" absolute w-20 h-[46px] -top-[46px] right-[11px]"></canvas>
 
                     </div>
                     <div class="text-center bg-Navyblue text-white p-10 sm:h-72 w-full h-96 sm:w-64 relative">
@@ -576,8 +616,9 @@
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="white"class="inline-block mx-2" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em"fill="white" class="inline-block mx-2" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
                         <p class="my-4" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="0.75em" class="absolute w-10 h-[50px] bg-peach p-2.5  -top-6 right-16" fill="white"  viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
-                        <canvas id="myCanvas2"  class=" absolute w-24 h-[72px] -top-[72px] right-0"></canvas>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.75em" class="absolute w-10 h-[50px] bg-peach p-2.5  -top-[1rem] right-[65px]" fill="white"  viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+                        <canvas id="myCanvas2"  class=" absolute w-20 h-[46px] -top-[46px] right-[12px]"></canvas>
+
 
                     </div>
                     <div class="text-center bg-Navyblue text-white p-10 sm:h-72 w-full h-96 sm:w-64 relative">
@@ -588,8 +629,9 @@
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="white"class="inline-block mx-2" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em"fill="white" class="inline-block mx-2" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
                         <p class="my-4" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="0.75em" class="absolute w-10 h-[50px] bg-peach p-2.5  -top-6 right-16" fill="white"  viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
-                        <canvas id="myCanvas3"  class=" absolute w-24 h-[72px] -top-[72px] right-0"></canvas>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.75em" class="absolute w-10 h-[50px] bg-peach p-2.5  -top-[1rem] right-[65px]" fill="white"  viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+                        <canvas id="myCanvas3"  class=" absolute w-20 h-[46px] -top-[46px] right-[12px]"></canvas>
+
 
                     </div>
                     <div class="text-center bg-Navyblue text-white p-10 sm:h-72 w-full h-96 sm:w-64 relative">
@@ -600,8 +642,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="white"class="inline-block mx-2" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em"fill="white" class="inline-block mx-2" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
                         <p class="my-4" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="0.75em" class="absolute w-10 h-[50px] bg-peach p-2.5  -top-6 right-16" fill="white"  viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
-                        <canvas id="myCanvas4"  class=" absolute w-24 h-[72px] -top-[72px] right-0"></canvas>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.75em" class="absolute w-10 h-[50px] bg-peach p-2.5  -top-[1rem] right-[65px]" fill="white"  viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+                        <canvas id="myCanvas4"  class=" absolute w-20 h-[46px] -top-[46px] right-[12px]"></canvas>
 
                     </div>
             </div>
@@ -681,6 +723,8 @@
 
        
         <section class="testimonial-section mx-6 sm:mx-24 py-12">
+            <h2> <span class="text-Navyblue font-bold">Reviews</span></h2>
+            <img src="../src/assets/heart-beat.PNG" class="mx-auto">
             <div id="default-carousel" class="relative w-full" data-carousel="slide">
                 <!-- Carousel wrapper -->
                 <div class="relative  overflow-hidden rounded-lg h-96">
@@ -817,8 +861,8 @@
                 <div class="border-2  border-gray-300">
                     <div class=" relative">
                         <img src="../src/assets/career-in-ndis-industry-400x250.jpg" class="h-64 w-full">
-                       <span class="absolute bg-peach text-white p-2 -right-5 top-16"><strong>08 </strong>Oct </span>
-                       <canvas id="myCanvas5"  class="  absolute w-7 h-7 -right-5 top-[103px]"></canvas>
+                       <span class="absolute bg-peach text-white p-2 -right-[17px] top-[63px]"><strong>08 </strong>Oct </span>
+                       <canvas id="myCanvas5"  class="  absolute w-6 h-6 -right-[16px] top-[103px]"></canvas>
 
                     </div>
                     <div class="p-4 ">
@@ -831,8 +875,8 @@
                     <div class="  relative  ">
                         <img src="../src/assets/Latest-NDIS-News-400x250.jpg" class="h-64 w-full">
 
-                        <span class="absolute bg-peach text-white p-2 -right-5 top-16"><strong>15 </strong>Oct </span>
-                        <canvas id="myCanvas6"  class="  absolute w-7 h-7 -right-5 top-[103px]"></canvas>
+                        <span class="absolute bg-peach text-white p-2 -right-[17px] top-[63px]"><strong>15 </strong>Oct </span>
+                        <canvas id="myCanvas6"  class="  absolute w-6 h-6 -right-[16px] top-[103px]"></canvas>
                        
                     </div>
                     <div class="p-4 ">
@@ -845,8 +889,8 @@
                     <div class="relative">
                         <img src="../src/assets/Ndis-application-form-400x250.jpg" class="h-64 w-full">
 
-                        <span class="absolute bg-peach text-white p-2 -right-5 top-16"><strong>18 </strong>Oct </span>
-                        <canvas id="myCanvas7"  class="  absolute w-7 h-7 -right-5 top-[103px]"></canvas>
+                        <span class="absolute bg-peach text-white p-2 -right-[17px] top-[63px]"><strong>18 </strong>Oct </span>
+                        <canvas id="myCanvas7"  class="  absolute w-6 h-6 -right-[16px] top-[103px]"></canvas>
                        
                     </div>
                     <div class="p-4 ">
@@ -968,6 +1012,50 @@
                
             </div>
         </div>
+
+        <!-- <button onclick="toggleModal1()">Submit documents</button>
+
+<div class="fixed z-50  top-0 left-0 right-0  hidden w-full  p-10 overflow-x-hidden   " id="modal1">
+    <div class="relative   max-w-sm lg:max-w-md max-h-sm md:max-h-full shadow-xl">
+        <!-- Modal content
+        <div class="relative bg-white p-4 rounded-lg shadow dark:bg-gray-700">
+            <button type="button" onclick="toggleModal1()" class="absolute  top-3 space-y-4 right-2.5 text-white  rounded-full  bg-[#A0A0A0]   text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="submit-documents">
+                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                </svg>
+               
+            </button>
+            <!-- Modal header 
+            <div class="lg:px-7 p-3  lg:space-y-3 md:space-y-2 space-y-1 rounded-t text-center dark:border-gray-600">
+                <h3 class="text-sm font-normal text-gray-900  dark:text-white">
+                    Verification                                                                </h3>
+                    <h2 class="font-bold text-lg">Document Submission</h2>
+                    <p>Please follow the steps to verify your information.</p>
+            </div>
+            <!-- Modal body 
+            
+                <div class="lg:p-10 p-3 text-center  text-gray-900 rounded-lg">
+                    <div class="overflow-y-scroll p-5  h-[21rem]">
+                       <p class=" text-center text-gray-900 ">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+                    </div>
+                   
+                
+                        
+                
+            </div>
+            <a href="javascript:void(0)" onclick="toggleModal1()" class="block  m-3 lg:m-10 bg-[#1B184A] text-white uppercase mx-auto p-3 rounded-xl text-center">Back</a>
+
+        </div>
+    </div>
+</div>
+<script>
+    const  modal1 = document.getElementById('modal1')
+
+    function toggleModal1(){
+        modal1.classList.toggle("hidden")
+    }
+</script> -->
 
        
     <script src="index.js"></script>
