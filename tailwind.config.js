@@ -12,6 +12,22 @@ module.exports = {
       fontFamily:{
        "roboto" : "Roboto, sans-serif;"
       },
+
+      animation: {
+        rotate: 'rotate 4s linear infinite',
+
+      },
+      keyframes: {
+        rotate: {
+          '0%': {
+            left: '100%',
+          },
+          '100%': {
+            left: '0',
+          },
+        },
+      },
+     
     
     },
   },
